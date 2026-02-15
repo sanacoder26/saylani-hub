@@ -39,11 +39,17 @@ function Login() {
             <div className="card p-4 shadow">
               <div className="text-center mb-4">
                 <div
-                  className="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center"
-                  style={{ width: '80px', height: '80px' }}
-                >
-                  <span className="display-4 fw-bold">S</span>
-                </div>
+  className="bg-success rounded-circle d-inline-flex align-items-center justify-content-center"
+  style={{ width: '80px', height: '80px', overflow: 'hidden' }}
+>
+  <img
+    src="saylani.png" // replace with your uploaded file path
+    alt="Saylani"
+    style={{ width: '100px', height: '100px', objectFit: '' }}
+  />
+</div>
+
+                  
                 <h2 className="mt-3 fw-bold" style={{ color: '#0057a8' }}>
                   Saylani Mass IT Hub
                 </h2>

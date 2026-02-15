@@ -46,93 +46,83 @@ function Signup() {
   };
 
   return (
-    <div className="min-vh-100 d-flex align-items-center bg-light">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-md-6 col-lg-5">
-            <div className="card p-4 shadow">
-              <div className="text-center mb-4">
-                <div
-                  className="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center"
-                  style={{ width: '80px', height: '80px' }}
-                >
-                  <span className="display-4 fw-bold">S</span>
-                </div>
-                <h2 className="mt-3 fw-bold" style={{ color: '#0057a8' }}>
-                  Create Account
-                </h2>
-                <p className="text-muted">Join Saylani Mass IT Hub</p>
-              </div>
-
-              <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                  <label htmlFor="email" className="form-label">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    placeholder="student@saylani.com"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="password" className="form-label">
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                    placeholder="At least 6 characters"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="confirmPassword" className="form-label">
-                    Confirm Password
-                  </label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="confirmPassword"
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                    required
-                    placeholder="Re-enter password"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="btn btn-primary w-100 py-2 fw-bold"
-                  disabled={isLoading}
-                >
-                  {isLoading ? 'Creating Account...' : 'Sign Up'}
-                </button>
-              </form>
-
-              <div className="text-center mt-3">
-                <p className="mb-0">
-                  Already have an account?{' '}
-                  <Link
-                    to="/login"
-                    className="text-decoration-none fw-bold text-success"
-                  >
-                    Login
-                  </Link>
-                </p>
+  <div className="min-vh-100 d-flex align-items-center bg-light">
+    <div className="container">
+      <div className="row justify-content-center">
+        <div className="col-md-6 col-lg-5">
+          <div className="card p-4 shadow">
+            <div className="text-center mb-4">
+              {/* Logo Circle */}
+              <div
+                className="bg-success rounded-circle d-inline-flex align-items-center justify-content-center"
+                style={{ width: '80px', height: '80px', overflow: 'hidden' }}
+              >
+                <img
+                  src="saylani.png" // make sure this is in public folder
+                  alt="Saylani"
+                  style={{ width: '100px', height: '100px', objectFit: '' }}
+                />
               </div>
             </div>
+
+            {/* Form */}
+            <form onSubmit={handleSubmit}>
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  placeholder="student@saylani.com"
+                />
+              </div>
+
+              <div className="mb-3">
+                <label htmlFor="password" className="form-label">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  className="form-control"
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  placeholder="At least 6 characters"
+                />
+              </div>
+
+              <div className="mb-4">
+                <label htmlFor="confirmPassword" className="form-label">
+                  Confirm Password
+                </label>
+                <input
+                  type="password"
+                  className="form-control"
+                  id="confirmPassword"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  required
+                  placeholder="Re-enter password"
+                />
+              </div>
+
+              <button type="submit" className="btn btn-success w-100">
+                Sign Up
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </div>
-  );
+  </div>
+);
+
 }
 
 export default Signup;
