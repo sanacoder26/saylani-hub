@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './styles/theme.css';
 
-import Login from './pages/login';
+import Login from './pages/loginogin';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
 import LostFound from './components/LostFound';
